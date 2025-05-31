@@ -1,0 +1,58 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "FK Screamer Trial";
+  src: url("./assets/fonts/FKScreamerTrial-Black.woff2") format("woff2"),
+    url("./assets/fonts/FKScreamerTrial-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Screamer Trial";
+  src: url("./assets/fonts/FKScreamerTrial-Regular.woff2") format("woff2"),
+    url("./assets/fonts/FKScreamerTrial-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Screamer Trial";
+  src: url("./assets/fonts/FKScreamerTrial-Bold.woff2") format("woff2"),
+    url("./assets/fonts/FKScreamerTrial-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Screamer Trial";
+  src: url("./assets/fonts/FKScreamerTrial-Medium.woff2") format("woff2"),
+    url("./assets/fonts/FKScreamerTrial-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FK Screamer Legacy Trial Upright";
+  src: url("./assets/fonts/FKScreamerLegacyTrial-Upright.woff2") format("woff2"),
+    url("./assets/fonts/FKScreamerLegacyTrial-Upright.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Regular.woff2") format("woff2"),
+    url("./assets/fonts/PPEditorialNew-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

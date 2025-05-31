@@ -1,0 +1,68 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.partners {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  @include mixins.flex-column;
+}
+
+.partners-header {
+  width: 100%;
+
+  p {
+    padding: 10px 48px 16px 16px;
+    border: 1px solid rgba(46, 46, 46, 1);
+    border-left: 0;
+    border-bottom: 0;
+    @include mixins.roboto-mono;
+    @include mixins.mono-p1-font;
+    color: rgba(177, 177, 177, 1);
+    text-transform: uppercase;
+  }
+}
+
+.partners-bottom {
+  @include mixins.flex-row;
+  border: solid rgba(46, 46, 46, 1);
+  border-width: 1px 0;
+}
+
+.partners-bottom__text {
+  min-width: 300px;
+  @include mixins.flex-column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 59px;
+  padding: 24px 16px;
+  min-height: 181px;
+  border-right: 1px solid rgba(46, 46, 46, 1);
+
+  h5 {
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h5-font;
+    color: variables.$white;
+    text-align: left;
+  }
+}
+
+.partners-navigation {
+  @include mixins.flex-row-center;
+  gap: 14px;
+
+  div {
+    cursor: pointer;
+  }
+}
+
+.partners-content,
+.swiper-wrapper {
+  @include mixins.flex-row;
+}
+
+.partners-container {
+  @include mixins.flex-row-center;
+  min-width: 280px;
+  min-height: 181px;
+  border-right: 1px solid rgba(46, 46, 46, 1);
+}

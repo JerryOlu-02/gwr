@@ -1,0 +1,83 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.hear-from {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 5%;
+  @include mixins.flex-column-center;
+  gap: 64px;
+
+  background-image: url("/src/assets/images/paper-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    @include mixins.overlay;
+  }
+}
+
+.hear-from__content {
+  @include mixins.flex-column-center;
+  gap: 41px;
+}
+
+.hear-from__text {
+  @include mixins.flex-column-center;
+  text-align: center;
+
+  h3 {
+    color: variables.$off-white;
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h3-font;
+  }
+
+  h1 {
+    color: rgba(234, 0, 0, 1);
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h1-font;
+    font-size: 180px;
+    position: relative;
+    top: -20px;
+  }
+
+  p {
+    @include mixins.roboto-flex;
+    @include mixins.flex-p1-font;
+    color: rgba(250, 244, 235, 0.8);
+    width: 60%;
+  }
+}
+
+.hear-from__buttons {
+  @include mixins.flex-row;
+  gap: 32px;
+
+  .btn {
+    @include mixins.btn-custom(rgba(234, 0, 0, 1));
+  }
+
+  .btn-outline {
+    @include mixins.btn-outline-custom(
+      variables.$off-white,
+      rgba(234, 0, 0, 1)
+    );
+  }
+}
+
+.hear-from__image {
+  width: 50rem;
+  height: 38.125rem;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

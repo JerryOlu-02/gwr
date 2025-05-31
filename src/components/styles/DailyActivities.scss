@@ -1,0 +1,126 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.daily-activities {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 110px;
+  @include mixins.flex-row;
+  justify-content: space-between;
+  gap: 145px;
+  position: relative;
+
+  background-image: url("/src/assets/images/paper-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: calc(20px);
+  position: relative;
+
+  &::before {
+    @include mixins.overlay;
+  }
+}
+
+.daily-activities__content {
+  @include mixins.flex-column;
+  width: 50%;
+  gap: 40px;
+  position: sticky;
+  top: 120px;
+  height: 100%;
+}
+
+.daily-activities__text {
+  @include mixins.flex-column;
+  align-items: flex-start;
+  text-align: left;
+
+  h3 {
+    color: variables.$off-white;
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h3-font;
+    font-size: 88px;
+    line-height: 100%;
+  }
+
+  h1 {
+    color: variables.$orange;
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h1-font;
+    position: relative;
+    top: -20px;
+  }
+
+  p {
+    @include mixins.roboto-flex;
+    @include mixins.flex-p1-font;
+    color: rgba(250, 244, 235, 0.8);
+  }
+}
+
+.daily-activities__buttons {
+  @include mixins.flex-row;
+  gap: 24px;
+
+  .btn {
+    box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+    @include mixins.btn-custom(variables.$orange);
+  }
+
+  .btn-outline {
+    box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+    @include mixins.btn-outline-custom(variables.$off-white, variables.$orange);
+  }
+}
+
+.daily-activities__info {
+  width: 50%;
+}
+
+.daily-activities__info-wrapper {
+  width: 100%;
+  @include mixins.flex-column;
+  gap: 48px;
+}
+
+.daily-activities__info-container {
+  @include mixins.flex-column;
+  width: 100%;
+  gap: 16px;
+}
+
+.activities-image {
+  width: 100%;
+  height: 30rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.activities-text {
+  text-align: left;
+  @include mixins.flex-column;
+  gap: 12px;
+
+  h5 {
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h5-font;
+    font-size: 32px;
+    letter-spacing: 0%;
+    color: variables.$off-white;
+  }
+
+  p {
+    @include mixins.roboto-flex;
+    @include mixins.flex-p1-font;
+    color: rgba(250, 244, 235, 0.8);
+    line-height: 20px;
+    letter-spacing: -2%;
+  }
+}

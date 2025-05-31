@@ -1,0 +1,110 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.sponsor {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 0 0;
+  @include mixins.flex-column-center;
+  gap: 80px;
+
+  background-image: url("/src/assets/images/paper-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    @include mixins.overlay;
+  }
+}
+
+.sponsor__content {
+  @include mixins.flex-column-center;
+  gap: 40px;
+}
+
+.sponsor__text {
+  @include mixins.flex-column-center;
+  text-align: center;
+
+  h3 {
+    color: variables.$off-white;
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h3-font;
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  h1 {
+    color: rgba(164, 0, 201, 1);
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h1-font;
+    font-size: 200px;
+    position: relative;
+    top: -20px;
+  }
+
+  p {
+    @include mixins.roboto-flex;
+    @include mixins.flex-p1-font;
+    line-height: 20px;
+    letter-spacing: 0%;
+    font-weight: 300;
+    color: rgba(250, 244, 235, 0.8);
+    width: 60%;
+  }
+}
+
+.sponsor__buttons {
+  @include mixins.flex-row;
+
+  .btn {
+    box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+    @include mixins.btn-custom(rgba(164, 0, 201, 1));
+  }
+}
+
+.sponsor__bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sponsor-container {
+  @include mixins.flex-column-center;
+  text-align: center;
+  padding: 20px;
+  min-height: 366px;
+  background-color: rgba(34, 34, 34, 1);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+
+  h6 {
+    font-family: "PP Editorial New";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -1%;
+    color: variables.$off-white;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h5-font;
+    font-size: 38px;
+    color: variables.$off-white;
+    margin-bottom: 16px;
+    margin-top: 12px;
+  }
+
+  p {
+    @include mixins.roboto-flex;
+    @include mixins.flex-p1-font;
+    letter-spacing: 0%;
+    font-weight: 300;
+    color: variables.$off-white;
+    width: 45%;
+  }
+}

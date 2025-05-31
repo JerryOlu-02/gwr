@@ -1,0 +1,34 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.btn {
+  background-color: variables.$red;
+  color: rgba(250, 244, 235, 1);
+  border: 1px solid variables.$red;
+
+  padding: 17px 24px;
+  @include mixins.roboto-mono;
+  @include mixins.button-font;
+  transition-property: background-color, border;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid variables.$red;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(203, 203, 203, 1);
+  color: rgba(203, 203, 203, 1);
+  transition-property: background-color, border;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba(203, 203, 203, 1);
+    border: 1px solid rgba(203, 203, 203, 1);
+    color: variables.$red;
+  }
+}
