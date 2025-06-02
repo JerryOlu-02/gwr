@@ -30,36 +30,36 @@
 }
 
 @mixin fk-h1-font {
-  font-size: 160px;
+  font-size: var(--fk-font-h1);
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
 }
 
 @mixin fk-h2-font {
-  font-size: 64px;
-  line-height: 86px;
+  font-size: var(--fk-font-h2);
+  line-height: var(--fk-line-h2);
   letter-spacing: 0%;
   text-transform: uppercase;
 }
 
 @mixin fk-h3-font {
-  font-size: 80px;
-  line-height: 78px;
+  font-size: var(--fk-font-h3);
+  line-height: var(--fk-line-h3);
   letter-spacing: 0%;
   text-transform: uppercase;
 }
 
 @mixin fk-h4-font {
-  font-size: 56px;
-  line-height: 78px;
+  font-size: var(--fk-font-h4);
+  line-height: var(--fk-line-h4);
   letter-spacing: 0%;
   text-transform: uppercase;
 }
 
 @mixin fk-h5-font {
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: var(--fk-font-h5);
   line-height: 100%;
   letter-spacing: -3%;
 }
@@ -71,14 +71,14 @@
 }
 
 @mixin mono-h6-font {
-  font-size: 16px;
+  font-size: var(--mono-h6-font);
   line-height: 100%;
-  letter-spacing: -3%;
+  letter-spacing: var(--mono-h6-space);
 }
 
 @mixin flex-p1-font {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: var(--flex-p1-font);
+  line-height: var(--flex-p1-line);
   letter-spacing: -1%;
 }
 

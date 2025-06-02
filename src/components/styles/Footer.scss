@@ -1,0 +1,92 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.footer {
+  width: 100%;
+  height: 100vh;
+  @include mixins.flex-column-center;
+
+  background-image: url("/src/assets/images/8-pool-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    @include mixins.overlay(rgba(48, 48, 48, 1));
+  }
+
+  h6 {
+    @include mixins.roboto-mono;
+    @include mixins.mono-h6-font;
+    font-size: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: variables.$off-white;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.footer-overlay {
+  @include mixins.overlay(transparent);
+  z-index: 0;
+  background-image: url("/src//assets/images/pool-8-bg.svg"),
+    url("/src//assets/images/pool-8-bg-2.svg"),
+    url("/src/assets/images/pool-8-bg-3.svg");
+  background-size: cover, contain, contain;
+  background-position-x: left, right, left;
+  background-position-y: top, center, bottom;
+  background-repeat: no-repeat;
+}
+
+.scrolling-text {
+  min-width: 100%;
+  @include mixins.flex-row;
+  align-items: center;
+  gap: 37px;
+  z-index: 2;
+  overflow-x: hidden;
+
+  position: absolute;
+  bottom: 200px;
+}
+
+.circle {
+  background-color: rgba(234, 0, 0, 0.6);
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  margin-left: 37px;
+}
+
+.text {
+  @include mixins.fk-screamer(700);
+  @include mixins.flex-row-center;
+  font-size: 180px;
+  width: max-content;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(234, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    h6 {
+      font-size: 24px;
+    }
+  }
+
+  .footer-overlay {
+    background-image: url("/src//assets/images/pool-8-bg-mobile.svg"),
+      url("/src//assets/images/pool-8-bg-2-mobile.svg"),
+      url("/src/assets/images/pool-8-bg-3-mobile.svg");
+    background-size: contain, contain, contain;
+    background-position-x: left, right, left;
+    background-position-y: top, top, bottom;
+  }
+}

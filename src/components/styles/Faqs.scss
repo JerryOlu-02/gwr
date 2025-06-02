@@ -1,0 +1,78 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.faqs {
+  padding: 120px 80px;
+
+  h1 {
+    color: rgba(234, 0, 0, 1);
+    font-size: var(--fk-font-h1-normal);
+  }
+}
+
+.faq-container {
+  @include mixins.flex-row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(46, 46, 46, 1);
+  //   transition: all 0.3s ease-in-out;
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(46, 46, 46, 1);
+  }
+}
+
+.faq-container__content {
+  @include mixins.flex-column;
+  height: fit-content;
+
+  h5 {
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h5-font;
+    color: variables.$off-white;
+    font-size: 24px;
+    letter-spacing: 2%;
+    text-transform: none;
+  }
+}
+
+.faq-answer {
+  @include mixins.roboto-flex;
+  @include mixins.flex-p1-font;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+
+  transform: scaleY(0);
+  margin-top: 0;
+  height: 0;
+  transform-origin: top;
+  transition-property: height, transform, margin;
+  transition: 0.3s ease-in-out;
+}
+
+.faq-answer.open {
+  transform: scaleY(1);
+  margin-top: 17px;
+  height: auto;
+}
+
+.faq-btn {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .faqs {
+    padding: 120px 40px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .faqs {
+    padding: 64px 20px;
+    gap: 40px;
+  }
+}

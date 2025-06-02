@@ -6,13 +6,11 @@ export default function PoolComp() {
   const btnClass = "btn-pool";
 
   const header = (
-    <h3>
-      the largest POOL
-      <br />
-      <span>COMPETITION </span>
-      <br />
-      IN NIGERIAN HISTORY
-    </h3>
+    <>
+      <h3>the largest POOL</h3>
+      <h1 className="blue">COMPETITION </h1>
+      <h3>IN NIGERIAN HISTORY</h3>
+    </>
   );
 
   return (

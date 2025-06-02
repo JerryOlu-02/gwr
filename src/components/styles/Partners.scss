@@ -55,8 +55,7 @@
   }
 }
 
-.partners-content,
-.swiper-wrapper {
+.partners-content.swiper-wrapper {
   @include mixins.flex-row;
 }
 
@@ -65,4 +64,14 @@
   min-width: 280px;
   min-height: 181px;
   border-right: 1px solid rgba(46, 46, 46, 1);
+}
+
+@media screen and (max-width: 750px) {
+  .partners-header {
+    @include mixins.flex-column-center;
+
+    P {
+      border-left: 1px solid rgba(46, 46, 46, 1);
+    }
+  }
 }

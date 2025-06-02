@@ -1,6 +1,7 @@
 import Button from "../reusable-components/Button";
 import "./styles/DailyActivities.scss";
 import { ACTIVITIES as activites } from "../helpers/object";
+import StickySection from "../reusable-components/StickySection";
 
 export default function DailyActivities() {
   const renderActivities = activites.map((activity, index) => {
@@ -19,26 +20,27 @@ export default function DailyActivities() {
     );
   });
 
+  const h3 = "the daily";
+
+  const h1 = "activities";
+
+  const p = "Check our activity line-up";
+
+  const btn = (
+    <>
+      <Button>RESERVE A FREE SPOT</Button>
+      <Button className="btn-outline">REGISTER TO PLAY</Button>
+    </>
+  );
+
   return (
-    <section className="daily-activities">
-      <aside className="daily-activities__content">
-        <div className="daily-activities__text">
-          <h3>the daily</h3>
-
-          <h1>activities</h1>
-
-          <p>Check our activity line-up</p>
-        </div>
-
-        <div className="daily-activities__buttons">
-          <Button>RESERVE A FREE SPOT</Button>
-          <Button className="btn-outline">REGISTER TO PLAY</Button>
-        </div>
-      </aside>
-
-      <aside className="daily-activities__info">
-        <div className="daily-activities__info-wrapper">{renderActivities}</div>
-      </aside>
-    </section>
+    <StickySection
+      wrapperClassName={"daily-activities__info-wrapper "}
+      rightJsx={renderActivities}
+      h1={h1}
+      h3={h3}
+      p={p}
+      btnJsx={btn}
+    />
   );
 }

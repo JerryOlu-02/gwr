@@ -18,12 +18,7 @@
   padding: 172px 75px 24px;
 
   &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    @include mixins.overlay();
     background: linear-gradient(
         360deg,
         rgba(0, 0, 0, 0) 33.41%,
@@ -37,9 +32,9 @@
 
 .hero-content {
   @include mixins.flex-column-center;
-  gap: 32px;
+  gap: 16px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero-text {
@@ -55,12 +50,22 @@
   h2 {
     @include mixins.fk-h2-font;
     color: rgba(236, 20, 20, 1);
+    position: relative;
+    top: -16px;
   }
 }
 
 .hero-buttons {
   @include mixins.flex-row-center;
   gap: 20px;
+
+  .btn {
+    @include mixins.btn-custom(variables.$red);
+  }
+
+  .btn-outline {
+    @include mixins.btn-outline-custom(variables.$off-white, variables.$red);
+  }
 }
 
 .hero-bottom {
@@ -68,7 +73,8 @@
   @include mixins.flex-row-center;
   gap: 20px;
   justify-content: space-between;
-  z-index: 1;
+  position: relative;
+  z-index: 0;
 }
 
 .hero-bottom__text {
@@ -82,12 +88,63 @@
     @include mixins.roboto-mono;
     margin: 0 6px;
     color: variables.$off-white;
-    font-size: 12px;
+    font-size: var(--mono-p1-font);
   }
 
   h5 {
     @include mixins.fk-screamer(700);
     color: variables.$white;
     @include mixins.fk-h5-font;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding: 235px 75px 48px;
+    background-image: url("/src/assets/images/hero-img-2.png");
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hero-bottom {
+    flex-wrap: wrap;
+
+    .hero-bottom__text:nth-of-type(2) {
+      order: 3;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hero {
+    padding: 105px 20px 28px;
+    gap: 250px;
+    background-image: url("/src/assets/images/hero-img-3.png");
+    background-position-x: center;
+  }
+
+  .hero-text {
+    h2 {
+      top: -8px;
+    }
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .hero-text {
+    h1 {
+      font-size: 95px;
+    }
   }
 }

@@ -6,14 +6,14 @@
   left: 0;
   top: 0;
   @include mixins.flex-row;
+  align-items: center;
   width: 100%;
-  z-index: 1;
-  justify-content: space-between;
+  z-index: 10;
   border-bottom: 1px solid rgba(66, 64, 62, 1);
 }
 
 .nav-left {
-  @include mixins.flex-row;
+  position: relative;
 }
 
 .nav-logo {
@@ -65,26 +65,173 @@
   }
 }
 
+.nav-right {
+  @include mixins.flex-row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .nav-buttons {
+  @include mixins.flex-row;
+}
+
+.nav-btn {
+  padding: 22.5px 24px;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: variables.$off-white;
   @include mixins.flex-row-center;
+  @include mixins.roboto-mono;
+  @include mixins.button-font;
 
-  a {
-    padding: 22.5px 24px;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
-    color: variables.$off-white;
-    @include mixins.flex-row-center;
-    @include mixins.roboto-mono;
-    @include mixins.button-font;
+  &:first-of-type {
+    border-left: 1px solid rgba(66, 64, 62, 1);
+  }
 
-    &:first-of-type {
-      border-left: 1px solid rgba(66, 64, 62, 1);
+  &:last-of-type {
+    background-color: variables.$red;
+    box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+  }
+}
+
+.menu-bar {
+  @include mixins.flex-column-center;
+  gap: 5px;
+  height: 30px;
+  width: 30px;
+
+  margin-left: 20px;
+  margin-right: 18.5px;
+}
+
+.menu-line {
+  height: 1.5px;
+  width: 18px;
+  background-color: variables.$white;
+  transition: rotate 0.5s ease-in-out;
+}
+
+.menu-bar.open {
+  .menu-line {
+    width: 25px;
+
+    &:nth-of-type(1) {
+      rotate: 40deg;
+      position: relative;
+      position: relative;
+      top: 2px;
     }
 
-    &:last-of-type {
-      background-color: variables.$red;
-      box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+    &:nth-of-type(2) {
+      display: none;
+    }
+
+    &:nth-of-type(3) {
+      rotate: 135deg;
+      position: relative;
+      top: -4px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .nav-logo {
+    padding: 10.5px 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: variables.$black;
+  }
+
+  .nav-logo {
+    padding: 10.5px 40px;
+    border-right: 1px solid rgba(66, 64, 62, 1);
+  }
+
+  .nav-right {
+    width: unset;
+  }
+
+  .nav-right.open {
+    transform: scaleX(1);
+
+    .nav-buttons > .nav-btn,
+    .nav-links > li > a {
+      opacity: 1;
+    }
+  }
+
+  .nav-right {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+
+    // display: none;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+
+    .nav-buttons > .nav-btn,
+    .nav-links > li > a {
+      opacity: 0;
+      transition-delay: 0.5s;
+      transition: opacity 1s ease-in-out;
+    }
+  }
+
+  .nav-buttons {
+    width: 100%;
+    background-color: variables.$black;
+    border-bottom: 1px solid rgba(66, 64, 62, 1);
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 64px 10% 24px;
+  }
+
+  .nav-btn {
+    width: 100%;
+
+    &:first-of-type {
+      border: 1px solid rgba(66, 64, 62, 1);
+    }
+  }
+
+  .nav-links {
+    @include mixins.flex-column;
+    width: 100%;
+
+    li {
+      background-color: rgba(0, 0, 0, 1);
+      border-left: 0;
+      border-bottom: 1px solid rgba(66, 64, 62, 1);
+      font-size: 14px;
+      width: 100%;
+      height: max-content;
+      @include mixins.flex-column-center;
+
+      &:last-of-type {
+        border-right: 0;
+      }
     }
   }
 }

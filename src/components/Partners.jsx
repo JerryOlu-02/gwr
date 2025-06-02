@@ -20,34 +20,18 @@ export default function Partners() {
       </aside>
 
       <aside className="partners-bottom">
-        <div className="partners-bottom__text">
-          <h5>
-            WE WORK WITH ONLY THE
-            <br /> BEST
-          </h5>
-
-          <div className="partners-navigation">
-            <div onClick={() => swiperRef.current.slidePrev()}>
-              <ArrowLeft />
-            </div>
-
-            <div onClick={() => swiperRef.current.slideNext()}>
-              <ArrowRight />
-            </div>
-          </div>
-        </div>
-
         <Swiper
-          slidesPerView={3.5}
+          grabCursor={true}
+          slidesPerView={4.5}
           breakpoints={{
             320: {
-              slidesPerView: 1.5,
+              slidesPerView: 2.5,
             },
             640: {
               slidesPerView: 2.5,
             },
             768: {
-              slidesPerView: 3.5,
+              slidesPerView: 4.5,
             },
           }}
           spaceBetween={0}
@@ -56,6 +40,23 @@ export default function Partners() {
           }}
           className="mySwiper partners-content"
         >
+          <SwiperSlide className="partners-bottom__text">
+            <h5>
+              WE WORK WITH ONLY THE
+              <br /> BEST
+            </h5>
+
+            <div className="partners-navigation">
+              <div onClick={() => swiperRef.current.slidePrev()}>
+                <ArrowLeft />
+              </div>
+
+              <div onClick={() => swiperRef.current.slideNext()}>
+                <ArrowRight />
+              </div>
+            </div>
+          </SwiperSlide>
+
           <SwiperSlide className="partners-container">
             <CueSportsLogo />
           </SwiperSlide>

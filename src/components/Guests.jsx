@@ -44,19 +44,24 @@ export default function Guests() {
       </aside>
 
       <Swiper
-        slidesPerView={3.5}
         breakpoints={{
           320: {
-            slidesPerView: 1.5,
+            slidesPerView: 2.5,
+            spaceBetween: "12",
           },
           640: {
             slidesPerView: 2.5,
+            spaceBetween: "12",
           },
           768: {
+            slidesPerView: 2.5,
+            spaceBetween: "24",
+          },
+          990: {
             slidesPerView: 3.5,
+            spaceBetween: "24",
           },
         }}
-        spaceBetween={24}
         className="mySwiper guests-wrapper"
       >
         {renderGuests}

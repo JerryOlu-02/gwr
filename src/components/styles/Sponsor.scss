@@ -3,7 +3,7 @@
 
 .sponsor {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 120px 0 0;
   @include mixins.flex-column-center;
   gap: 80px;
@@ -33,7 +33,6 @@
     text-transform: uppercase;
     @include mixins.fk-screamer(700);
     @include mixins.fk-h3-font;
-    font-size: 100px;
     line-height: 100%;
   }
 
@@ -42,7 +41,7 @@
     text-transform: uppercase;
     @include mixins.fk-screamer(700);
     @include mixins.fk-h1-font;
-    font-size: 200px;
+    font-size: var(--fk-font-h1-normal);
     position: relative;
     top: -20px;
   }
@@ -106,5 +105,81 @@
     font-weight: 300;
     color: variables.$off-white;
     width: 45%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sponsor__text {
+    h3 {
+      font-size: 100px;
+    }
+
+    h1 {
+      font-size: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sponsor-container {
+    p {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sponsor {
+    padding: 64px 0 0;
+  }
+
+  .sponsor__content {
+    padding: 0 20px;
+  }
+
+  .sponsor-container {
+    p {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .sponsor__bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sponsor-container {
+    p {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sponsor {
+    gap: 40px;
+  }
+
+  .sponsor__content {
+    gap: 20px;
+  }
+
+  .sponsor__text {
+    p {
+      width: 100%;
+    }
+
+    h1 {
+      top: -8px;
+    }
+  }
+
+  .sponsor__buttons {
+    width: 100%;
+
+    .btn {
+      width: 100%;
+    }
   }
 }

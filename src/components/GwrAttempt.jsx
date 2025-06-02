@@ -7,15 +7,12 @@ export default function GwrAttempt() {
   const btnClass = "btn-gwr";
 
   const header = (
-    <h4>
-      the Guinness
-      <br />
-      <span>WORLD</span>
-      <br />
-      <span>RECORD</span>
-      <br />
-      attempts
-    </h4>
+    <>
+      <h4>the Guinness</h4>
+      <h1 className="wine">WORLD</h1>
+      <h1 className="wine">RECORD</h1>
+      <h4>attempts</h4>
+    </>
   );
 
   return (

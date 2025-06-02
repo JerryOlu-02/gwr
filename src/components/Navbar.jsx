@@ -1,10 +1,20 @@
 import "./styles/Navbar.scss";
-import Button from "../reusable-components/Button";
 import { ReactComponent as Logo } from "../assets/svg/pool.svg";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const activeClass = isOpen ? "open" : "";
+
+  const handleToggleMenu = function () {
+    setIsOpen((isMenuOpen) => {
+      return isMenuOpen ? !isMenuOpen : true;
+    });
+  };
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${activeClass}`}>
       <aside className="nav-left">
         <div className="nav-logo">
           <a>
@@ -12,7 +22,9 @@ export default function Navbar() {
             <p>POOLFEST</p>
           </a>
         </div>
+      </aside>
 
+      <div className={`nav-right ${activeClass}`}>
         <ul className="nav-links">
           <li>
             <a>THE EVENT</a>
@@ -34,12 +46,21 @@ export default function Navbar() {
             <a>SHOP MERCH</a>
           </li>
         </ul>
-      </aside>
 
-      <div className="nav-buttons">
-        <a>REGISTER TO PLAY</a>
+        <div className="nav-buttons">
+          <a className="nav-btn">REGISTER TO PLAY</a>
 
-        <a>RESERVE A FREE SPOT</a>
+          <a className="nav-btn">RESERVE A FREE SPOT</a>
+        </div>
+      </div>
+
+      <div
+        onClick={() => handleToggleMenu()}
+        className={`menu-bar ${activeClass}`}
+      >
+        <span className="menu-line"></span>
+        <span className="menu-line"></span>
+        <span className="menu-line"></span>
       </div>
     </nav>
   );

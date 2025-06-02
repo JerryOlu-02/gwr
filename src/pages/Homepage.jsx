@@ -1,4 +1,5 @@
 import DailyActivities from "../components/DailyActivities";
+import Faqs from "../components/Faqs";
 import Guests from "../components/Guests";
 import GwrAttempt from "../components/GwrAttempt";
 import HearFrom from "../components/HearFrom";
@@ -8,6 +9,8 @@ import Partners from "../components/Partners";
 import PoolComp from "../components/PoolComp";
 import ShopBrands from "../components/ShopBrands";
 import Sponsor from "../components/Sponsor";
+import History from "../components/History";
+import Footer from "../components/Footer";
 
 export default function Homepage() {
   return (
@@ -31,6 +34,12 @@ export default function Homepage() {
       <Sponsor />
 
       <ShopBrands />
+
+      <Faqs />
+
+      <History />
+
+      <Footer />
     </>
   );
 }

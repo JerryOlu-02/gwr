@@ -1,0 +1,156 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.sticky-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 110px;
+  @include mixins.flex-row;
+  justify-content: space-between;
+  gap: 145px;
+  position: relative;
+
+  background-image: url("/src/assets/images/paper-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    @include mixins.overlay;
+  }
+}
+
+.sticky-section__content {
+  @include mixins.flex-column;
+  //   width: 50%;
+  gap: 40px;
+  position: sticky;
+  top: 120px;
+  height: 100%;
+}
+
+.sticky-section__text {
+  @include mixins.flex-column;
+  align-items: flex-start;
+  text-align: left;
+
+  h3 {
+    color: variables.$off-white;
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h3-font;
+    line-height: 100%;
+  }
+
+  h1 {
+    color: variables.$orange;
+    text-transform: uppercase;
+    @include mixins.fk-screamer(700);
+    @include mixins.fk-h1-font;
+    font-size: var(--fk-font-h1-normal);
+    position: relative;
+    top: -20px;
+  }
+
+  p {
+    @include mixins.roboto-flex;
+    @include mixins.flex-p1-font;
+    color: rgba(250, 244, 235, 0.8);
+  }
+}
+
+.sticky-section__buttons {
+  @include mixins.flex-row;
+  gap: 24px;
+
+  .btn {
+    box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+    @include mixins.btn-custom(variables.$orange);
+  }
+
+  .btn-outline {
+    box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
+    @include mixins.btn-outline-custom(variables.$off-white, variables.$orange);
+  }
+}
+
+.sticky-section__info {
+  width: 100%;
+}
+
+.sticky-section__info-wrapper {
+  width: 100%;
+  @include mixins.flex-column;
+}
+
+@media screen and (max-width: 1250px) {
+  .sticky-section {
+    gap: 70px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .sticky-section {
+    padding: 120px 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sticky-section__text {
+    h1 {
+      font-size: 120px;
+      top: -16px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sticky-section__text {
+    h1 {
+      font-size: 105px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sticky-section {
+    flex-direction: column;
+    min-height: 100%;
+    padding: 64px 20px;
+    gap: 64px;
+  }
+
+  .sticky-section__content {
+    position: relative;
+    top: 0;
+  }
+
+  .sticky-section__text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .sticky-section__buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sticky-section__content {
+    gap: 22px;
+  }
+
+  .sticky-section__text {
+    h1 {
+      font-size: 88px;
+      top: 0;
+    }
+  }
+
+  .sticky-section__buttons {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+}
