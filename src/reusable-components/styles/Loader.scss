@@ -1,0 +1,48 @@
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.loader {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$off-white;
+}
+
+.loader.loaded {
+  display: none;
+}
+
+.loader-svg {
+  width: 80vw;
+  height: 500px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.loader-text {
+  @include mixins.fk-screamer(700);
+  @include mixins.fk-h1-font;
+  font-size: 120px;
+  color: variables.$red;
+  height: 110px;
+  line-height: 110px;
+  width: 150px;
+
+  @include mixins.flex-column;
+  align-items: center;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

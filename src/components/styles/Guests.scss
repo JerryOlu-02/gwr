@@ -6,6 +6,7 @@
   width: 100%;
   min-height: 100vh;
   @include mixins.flex-column;
+  justify-content: center;
   gap: 64px;
 
   background-image: url("/src/assets/images/gwr-bg.png");

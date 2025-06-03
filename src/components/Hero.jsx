@@ -1,11 +1,10 @@
 import Button from "../reusable-components/Button";
-import Navbar from "./Navbar";
 import "./styles/Hero.scss";
 
-export default function Hero() {
+export default function Hero({ children }) {
   return (
     <section className="hero">
-      <Navbar />
+      {children}
 
       <aside className="hero-content">
         <div className="hero-text">
@@ -16,7 +15,7 @@ export default function Hero() {
         <div className="hero-buttons">
           <Button>RESERVE A FREE SPOT</Button>
 
-          <Button className="btn-outline">RESERVE A FREE SPOT</Button>
+          <Button className="btn-outline">REGISTER TO PLAY</Button>
         </div>
       </aside>
 

@@ -2,13 +2,21 @@ import Button from "../reusable-components/Button";
 import "./styles/DailyActivities.scss";
 import { ACTIVITIES as activites } from "../helpers/object";
 import StickySection from "../reusable-components/StickySection";
+import { useEffect, useRef } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export default function DailyActivities() {
+export default function DailyActivities({ setRef }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setRef(ref);
+  }, []);
+
   const renderActivities = activites.map((activity, index) => {
     return (
       <div key={index} className="daily-activities__info-container">
         <div className="activities-image">
-          <img src={activity.image} alt="activities__image" />
+          <LazyLoadImage src={activity.image} alt="activities__image" />
         </div>
 
         <div className="activities-text">
@@ -35,6 +43,7 @@ export default function DailyActivities() {
 
   return (
     <StickySection
+      ref={ref}
       wrapperClassName={"daily-activities__info-wrapper "}
       rightJsx={renderActivities}
       h1={h1}

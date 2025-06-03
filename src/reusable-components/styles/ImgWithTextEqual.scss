@@ -10,6 +10,11 @@
 .img-withText__content {
   width: 50%;
   padding: 67px 5%;
+  // background-image: linear-gradient(
+  //     rgba(255, 255, 255, 0.5),
+  //     rgba(255, 255, 255, 0.5)
+  //   ),
+  //   url("/src/assets/images/paper-bg.png");
   background-image: url("/src/assets/images/paper-bg.png");
   background-repeat: no-repeat;
   background-size: cover;

@@ -11,29 +11,45 @@ import ShopBrands from "../components/ShopBrands";
 import Sponsor from "../components/Sponsor";
 import History from "../components/History";
 import Footer from "../components/Footer";
+import { useState } from "react";
+import Navbar from "../components/Navbar";
 
 export default function Homepage() {
+  const [eventRef, setEventRef] = useState();
+  const [challengerRef, setChallengerRef] = useState();
+  const [activitiesRef, setActivitiesRef] = useState();
+  const [guestsRef, setGuestsRef] = useState();
+  const [shopMerchRef, setShopBrandsMerch] = useState();
+
   return (
     <>
-      <Hero />
+      <Hero>
+        <Navbar
+          eventRef={eventRef}
+          challengerRef={challengerRef}
+          activitiesRef={activitiesRef}
+          guestsRef={guestsRef}
+          shopMerchRef={shopMerchRef}
+        />
+      </Hero>
 
       <Partners />
 
-      <GwrAttempt />
+      <GwrAttempt setRef={setEventRef} />
 
       <PoolComp />
 
-      <MeetChallenger />
+      <MeetChallenger setRef={setChallengerRef} />
 
       <HearFrom />
 
-      <DailyActivities />
+      <DailyActivities setRef={setActivitiesRef} />
 
-      <Guests />
+      <Guests setRef={setGuestsRef} />
 
       <Sponsor />
 
-      <ShopBrands />
+      <ShopBrands setRef={setShopBrandsMerch} />
 
       <Faqs />
 

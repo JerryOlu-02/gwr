@@ -1,10 +1,17 @@
 import "./styles/MeetChallenger.scss";
 import ChallengerImg from "../assets/images/challenger-img.png";
 import ImgWithTextEqual from "../reusable-components/ImgWithTextEqual";
+import { useEffect, useRef } from "react";
 
-export default function MeetChallenger() {
+export default function MeetChallenger({ setRef }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setRef(ref);
+  }, []);
+
   return (
-    <ImgWithTextEqual img={ChallengerImg}>
+    <ImgWithTextEqual ref={ref} img={ChallengerImg}>
       <h3>meet the</h3>
       <h5>challenger</h5>
 

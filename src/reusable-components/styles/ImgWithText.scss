@@ -116,6 +116,7 @@
   p {
     @include mixins.roboto-flex;
     @include mixins.flex-p1-font;
+    font-size: var(--flex-p1-font);
     color: variables.$black;
   }
 }

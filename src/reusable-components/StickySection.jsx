@@ -1,6 +1,7 @@
 import "./styles/StickySection.scss";
 
 export default function StickySection({
+  ref,
   sectionClassName,
   wrapperClassName,
   rightJsx,
@@ -10,7 +11,7 @@ export default function StickySection({
   btnJsx,
 }) {
   return (
-    <section className={`sticky-section ${sectionClassName}`}>
+    <section ref={ref} className={`sticky-section ${sectionClassName}`}>
       <aside className="sticky-section__content">
         <div className="sticky-section__text">
           {h3 && <h3>{h3}</h3>}

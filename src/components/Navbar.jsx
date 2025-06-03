@@ -2,7 +2,13 @@ import "./styles/Navbar.scss";
 import { ReactComponent as Logo } from "../assets/svg/pool.svg";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({
+  eventRef,
+  challengerRef,
+  activitiesRef,
+  guestsRef,
+  shopMerchRef,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const activeClass = isOpen ? "open" : "";
@@ -11,6 +17,10 @@ export default function Navbar() {
     setIsOpen((isMenuOpen) => {
       return isMenuOpen ? !isMenuOpen : true;
     });
+  };
+
+  const handleScrollToSection = function (ref) {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -26,23 +36,23 @@ export default function Navbar() {
 
       <div className={`nav-right ${activeClass}`}>
         <ul className="nav-links">
-          <li>
+          <li onClick={() => handleScrollToSection(eventRef)}>
             <a>THE EVENT</a>
           </li>
 
-          <li>
+          <li onClick={() => handleScrollToSection(challengerRef)}>
             <a>THE CHALLENGER</a>
           </li>
 
-          <li>
+          <li onClick={() => handleScrollToSection(activitiesRef)}>
             <a>ACTIVITIES</a>
           </li>
 
-          <li>
+          <li onClick={() => handleScrollToSection(guestsRef)}>
             <a>GUESTS</a>
           </li>
 
-          <li>
+          <li onClick={() => handleScrollToSection(shopMerchRef)}>
             <a>SHOP MERCH</a>
           </li>
         </ul>

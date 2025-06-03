@@ -8,7 +8,7 @@
 }
 
 .partners-header {
-  width: 100%;
+  width: max-content;
 
   p {
     padding: 10px 48px 16px 16px;
@@ -64,6 +64,12 @@
   min-width: 280px;
   min-height: 181px;
   border-right: 1px solid rgba(46, 46, 46, 1);
+}
+
+@media screen and (max-width: 850px) {
+  .partners-bottom__text {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 750px) {

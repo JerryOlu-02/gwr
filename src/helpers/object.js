@@ -4,10 +4,14 @@ import DjSet from "../assets/images/dj-set.png";
 import PoolPlayers from "../assets/images/pool-players.png";
 
 // GUEST IMAGES
-import Donjazzy from "../assets/images/don-jazzy.png";
-import PrettyMike from "../assets/images/pretty-mike.png";
-import Ekemeni from "../assets/images/ekemeni.png";
-import Harrysong from "../assets/images/harry-song.png";
+import Donjazzy from "../assets/images/guests/don-jazzy.png";
+import PrettyMike from "../assets/images/guests/pretty-mike.png";
+import Ekemeni from "../assets/images/guests/ekemeni.png";
+import Harrysong from "../assets/images/guests/harry-song.png";
+import Orezi from "../assets/images/guests/orezi.png";
+import Chidi from "../assets/images/guests/chidi.png";
+import Richard from "../assets/images/guests/richard.png";
+import Roby from "../assets/images/guests/roby.png";
 
 // PRODUCT IMAGES
 import ProductOne from "../assets/images/product-1.png";
@@ -60,6 +64,26 @@ export const GUESTS = [
     image: Harrysong,
     title: "Harrysong",
     description: "Singer and Songwriter",
+  },
+  {
+    image: Orezi,
+    title: "Orezi",
+    description: "Nigerian Musician ",
+  },
+  {
+    image: Chidi,
+    title: "Chidi Mokeme",
+    description: "Nigerian Actor and Reality Show Host",
+  },
+  {
+    image: Richard,
+    title: "Richard Nnadi",
+    description: "CEO, Eve After Dark (Duke of Spades)",
+  },
+  {
+    image: Roby,
+    title: "Roby ekpo",
+    description: "MC / Host",
   },
 ];
 

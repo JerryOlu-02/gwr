@@ -1,7 +1,9 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Button from "./Button";
 import "./styles/ImgWithText.scss";
 
 export default function ImgWithText({
+  ref,
   sectionClass,
   h3,
   h4,
@@ -11,7 +13,7 @@ export default function ImgWithText({
   btnClass,
 }) {
   return (
-    <section className={`imgText ${sectionClass}`}>
+    <section ref={ref} className={`imgText ${sectionClass}`}>
       <aside className="imgText-content">
         <div className="imgText-content__text">
           {logo && logo}
@@ -33,7 +35,7 @@ export default function ImgWithText({
       </aside>
 
       <aside className="imgText-image">
-        <img src={src} alt="8-Ball__Image" />
+        <LazyLoadImage src={src} alt="8-Ball__Image" />
       </aside>
     </section>
   );
