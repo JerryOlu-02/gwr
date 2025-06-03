@@ -18,12 +18,11 @@ export default function MeetChallenger({ setRef }) {
       <h6>SCOTT IGEBENE</h6>
 
       <p>
-        The Guinness World Record Pool Event is a groundbreaking celebration
-        where Nigeria takes center stage in an extraordinary attempt to break a
-        Guinness World Record in the game of pool. Set against the vibrant
-        backdrop of Silverbird Galleria, this event showcases one man, one
-        table, and one historic feat that will captivate both live and global
-        audiences. 
+        I'm Scott Igbene, and I’ve played pool since I was 13. Now, with support
+        from DUNKIT, TRUE PATRIOT, and the Cue Sports Association of Nigeria,
+        I’m taking on the Guinness World Record for the Longest Individual Pool
+        Marathon — 125 hours of non-stop 8-ball at Silverbird Galleria. This is
+        the toughest challenge of my life — and I’m ready.
       </p>
     </ImgWithTextEqual>
   );
