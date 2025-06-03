@@ -113,7 +113,7 @@
     }
   }
 
-  p {
+  .content-text {
     @include mixins.roboto-flex;
     @include mixins.flex-p1-font;
     font-size: var(--flex-p1-font);
@@ -183,7 +183,7 @@
   }
 
   .imgText-content__text {
-    p {
+    .content-text {
       font-size: 12px;
     }
   }

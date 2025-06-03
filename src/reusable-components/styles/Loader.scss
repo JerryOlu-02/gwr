@@ -13,6 +13,14 @@
   justify-content: center;
   align-items: center;
   background-color: variables.$off-white;
+
+  &::before {
+    @include mixins.overlay(variables.$off-white);
+    background-image: url("/src/assets/images/gwr-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
 }
 
 .loader.loaded {

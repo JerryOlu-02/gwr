@@ -22,7 +22,7 @@ export default function ImgWithText({
 
           {h3 && h3}
 
-          <p>
+          <p className="content-text">
             Scott will be attempting not one, but two official Guinness World
             Records: playing pool for the longest continuous time as an
             individual, and playing against the most number of people in a
