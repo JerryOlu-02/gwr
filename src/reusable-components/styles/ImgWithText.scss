@@ -115,8 +115,9 @@
 
   .content-text {
     @include mixins.roboto-flex;
-    @include mixins.flex-p1-font;
-    font-size: var(--flex-p1-font);
+    font-size: 14px;
+    line-height: var(--flex-p1-line);
+    letter-spacing: -1%;
     color: variables.$black;
   }
 }
@@ -182,7 +183,9 @@
     }
   }
 
-  .content-text {
-    font-size: 12px;
+  .imgText-content__text {
+    .content-text {
+      font-size: 12px;
+    }
   }
 }

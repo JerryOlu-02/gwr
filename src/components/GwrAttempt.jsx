@@ -1,5 +1,6 @@
 import ImgWithText from "../reusable-components/ImgWithText";
 import GwrImage from "../assets/images/gwr-img.png";
+import GwrImageClear from "../assets/images/gwr-img-clear.png";
 import { ReactComponent as GwrLogo } from "../assets/svg/gwr-logo.svg";
 import { useEffect, useRef } from "react";
 
@@ -25,7 +26,8 @@ export default function GwrAttempt({ setRef }) {
   return (
     <ImgWithText
       ref={ref}
-      src={GwrImage}
+      src={GwrImageClear}
+      srcPlaceholder={GwrImage}
       button={btn}
       logo={<GwrLogo />}
       h4={header}

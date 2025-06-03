@@ -20,8 +20,9 @@ export default function Guests({ setRef }) {
         <div className="guests-container">
           <div className="guests-container__img">
             <LazyLoadImage
-              width={400}
-              height={500}
+              width={`100%`}
+              height={`100%`}
+              placeholderSrc={guest.imagePlaceholder}
               src={guest.image}
               alt="guest__image"
             />

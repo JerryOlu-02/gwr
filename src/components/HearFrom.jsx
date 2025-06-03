@@ -1,4 +1,5 @@
 import Button from "../reusable-components/Button";
+import Video from "../reusable-components/Video";
 import "./styles/HearFrom.scss";
 
 export default function HearFrom() {
@@ -23,8 +24,9 @@ export default function HearFrom() {
         </div>
       </aside>
 
-      <aside className="hear-from__image">
-        <img alt="scott__talking" />
+      <aside className="hear-from__video">
+        {/* <img alt="scott__talking" /> */}
+        <Video />
       </aside>
     </section>
   );

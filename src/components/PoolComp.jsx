@@ -1,5 +1,6 @@
 import ImgWithText from "../reusable-components/ImgWithText";
 import PoolImage from "../assets/images/pool-img.png";
+import PoolImageClear from "../assets/images/pool-img-clear.png";
 
 export default function PoolComp() {
   const btn = "REGISTER TO PLAY";
@@ -16,7 +17,8 @@ export default function PoolComp() {
   return (
     <ImgWithText
       sectionClass={"ImgWithText__2"}
-      src={PoolImage}
+      srcPlaceholder={PoolImage}
+      src={PoolImageClear}
       button={btn}
       h3={header}
       btnClass={btnClass}

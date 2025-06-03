@@ -16,7 +16,13 @@ export default function DailyActivities({ setRef }) {
     return (
       <div key={index} className="daily-activities__info-container">
         <div className="activities-image">
-          <LazyLoadImage src={activity.image} alt="activities__image" />
+          <LazyLoadImage
+            width={`100%`}
+            height={`100%`}
+            placeholderSrc={activity.image}
+            src={activity.imageClear}
+            alt="activities__image"
+          />
         </div>
 
         <div className="activities-text">

@@ -1,5 +1,6 @@
 import "./styles/History.scss";
 import ScottStanding from "../assets/images/scott-standing.jpg";
+import ScottStandingClear from "../assets/images/scott-standing-clear.png";
 import ImgWithTextEqual from "../reusable-components/ImgWithTextEqual";
 import Button from "../reusable-components/Button";
 
@@ -7,7 +8,8 @@ export default function History() {
   return (
     <ImgWithTextEqual
       className={"history"}
-      img={ScottStanding}
+      img={ScottStandingClear}
+      placeholderImg={ScottStanding}
       textClassname={"history__text"}
     >
       <h5>BECOME A PART OF</h5>

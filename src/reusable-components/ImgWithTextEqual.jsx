@@ -6,6 +6,7 @@ export default function ImgWithTextEqual({
   className,
   textClassname,
   img,
+  placeholderImg,
   children,
 }) {
   return (
@@ -15,7 +16,13 @@ export default function ImgWithTextEqual({
       </aside>
 
       <aside className="img-withText__image">
-        <LazyLoadImage src={img} alt="challenger__Image" />
+        <LazyLoadImage
+          placeholderSrc={placeholderImg}
+          src={img}
+          width={`100%`}
+          height={`100%`}
+          alt="challenger__Image"
+        />
       </aside>
     </section>
   );

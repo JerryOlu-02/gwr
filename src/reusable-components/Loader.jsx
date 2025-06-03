@@ -46,7 +46,7 @@ export default function Loader({ className }) {
         .to(".span", {
           yPercent: -2600,
           repeat: 0,
-          duration: 8,
+          duration: 6,
           ease: "power1.inOut",
         })
         .totalProgress(0);
@@ -59,9 +59,9 @@ export default function Loader({ className }) {
       .timeline()
       .to(".loader", {
         width: 0,
-        delay: 8,
+        delay: 6,
         repeat: 0,
-        duration: 5,
+        duration: 3,
         ease: "power1.inOut",
       })
       .totalProgress(0);
@@ -70,7 +70,7 @@ export default function Loader({ className }) {
       .timeline()
       .to(".loader-svg, .loader-text", {
         opacity: 0,
-        delay: 8,
+        delay: 6,
         repeat: 0,
         duration: 2,
         ease: "power1.inOut",

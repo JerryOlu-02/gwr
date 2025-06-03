@@ -9,6 +9,7 @@ export default function ImgWithText({
   h4,
   button,
   src,
+  srcPlaceholder,
   logo,
   btnClass,
 }) {
@@ -35,7 +36,13 @@ export default function ImgWithText({
       </aside>
 
       <aside className="imgText-image">
-        <LazyLoadImage src={src} alt="8-Ball__Image" />
+        <LazyLoadImage
+          placeholderSrc={srcPlaceholder}
+          src={src}
+          width={`100%`}
+          height={`100%`}
+          alt="8-Ball__Image"
+        />
       </aside>
     </section>
   );

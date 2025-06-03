@@ -1,5 +1,6 @@
 import "./styles/MeetChallenger.scss";
 import ChallengerImg from "../assets/images/challenger-img.png";
+import ChallengerImgClear from "../assets/images/challenger-img-clear.png";
 import ImgWithTextEqual from "../reusable-components/ImgWithTextEqual";
 import { useEffect, useRef } from "react";
 
@@ -11,7 +12,11 @@ export default function MeetChallenger({ setRef }) {
   }, []);
 
   return (
-    <ImgWithTextEqual ref={ref} img={ChallengerImg}>
+    <ImgWithTextEqual
+      placeholderImg={ChallengerImg}
+      ref={ref}
+      img={ChallengerImgClear}
+    >
       <h3>meet the</h3>
       <h5>challenger</h5>
 

@@ -15,7 +15,13 @@ export default function ShopBrands({ setRef }) {
     return (
       <div key={index} className="products-container">
         <div className="product__img">
-          <LazyLoadImage src={product.image} alt="product__image" />
+          <LazyLoadImage
+            placeholderSrc={product.image}
+            src={product.clearImage}
+            width={`100%`}
+            height={`100%`}
+            alt="product__image"
+          />
         </div>
 
         <div className="products__desc">
