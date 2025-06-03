@@ -20,8 +20,9 @@
 }
 
 .loader-svg {
-  width: 80vw;
-  height: 500px;
+  width: fit-content;
+  gap: 20px;
+  height: 400px;
 
   svg {
     width: 100%;
