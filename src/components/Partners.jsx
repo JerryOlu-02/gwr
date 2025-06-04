@@ -8,11 +8,26 @@ import { ReactComponent as ArrowLeft } from "../assets/svg/arrow-back.svg";
 import { ReactComponent as ArrowRight } from "../assets/svg/arrow-front.svg";
 import { useRef } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin();
 
 export default function Partners() {
   const swiperRef = useRef(null);
-  const swiper = useSwiper();
+
+  useGSAP(() => {
+    let sections = gsap.utils.toArray(".partners-container");
+
+    gsap
+      .to(".partners-container", {
+        xPercent: -100 * (sections.length - 5),
+        repeat: -1,
+        duration: 15,
+        ease: "linear",
+      })
+      .totalProgress(0);
+  });
 
   return (
     <section className="partners">
@@ -52,19 +67,14 @@ export default function Partners() {
               slidesPerView: 3.5,
             },
           }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
           spaceBetween={0}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          modules={[Autoplay]}
           className="mySwiper partners-content"
         >
           <SwiperSlide className="partners-container">
-            <CueSportsLogo />
+            <PatriotLogo />
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
@@ -76,7 +86,23 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
+            <CueSportsLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
             <PatriotLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <DunkitLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <RhythmLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <CueSportsLogo />
           </SwiperSlide>
         </Swiper>
       </aside>

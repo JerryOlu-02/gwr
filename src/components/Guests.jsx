@@ -1,14 +1,31 @@
 import { GUESTS as guests } from "../helpers/object";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import Button from "../reusable-components/Button";
 import "swiper/css";
 import "./styles/Guests.scss";
 import { useEffect, useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin();
 
 export default function Guests({ setRef }) {
   const ref = useRef();
+  const swipeRef = useRef();
+
+  useGSAP(() => {
+    let sections = gsap.utils.toArray(".guests__box");
+
+    gsap
+      .to(".guests__box", {
+        xPercent: -100 * (sections.length - 1.5),
+        repeat: -1,
+        duration: 40,
+        ease: "linear",
+      })
+      .totalProgress(0);
+  });
 
   useEffect(() => {
     setRef(ref);
@@ -16,7 +33,7 @@ export default function Guests({ setRef }) {
 
   const renderGuests = guests.map((guest, index) => {
     return (
-      <SwiperSlide key={index}>
+      <SwiperSlide className="guests__box" key={index}>
         <div className="guests-container">
           <div className="guests-container__img">
             <LazyLoadImage
@@ -61,6 +78,7 @@ export default function Guests({ setRef }) {
       </aside>
 
       <Swiper
+        ref={swipeRef}
         breakpoints={{
           320: {
             slidesPerView: 2.5,
@@ -79,11 +97,6 @@ export default function Guests({ setRef }) {
             spaceBetween: "24",
           },
         }}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
         className="mySwiper guests-wrapper"
       >
         {renderGuests}

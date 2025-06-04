@@ -6,6 +6,7 @@
   color: rgba(250, 244, 235, 1);
   border: 1px solid variables.$red;
   padding: 17px 24px;
+  width: 100%;
 
   @include mixins.roboto-mono;
   @include mixins.button-font;

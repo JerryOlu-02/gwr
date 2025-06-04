@@ -13,6 +13,8 @@ export default function GwrAttempt({ setRef }) {
 
   const btn = "RESERVE A FREE SPOT";
   const btnClass = "btn-gwr";
+  const text =
+    "This event will feature not one, but two official Guinness World Records attempts: playing pool for the longest continuous time as an individual, and playing against the most number of people in a single stretch of consecutive pool games. Each shot, each match, brings Nigeria one step closer to global recognition.";
 
   const header = (
     <>
@@ -33,6 +35,7 @@ export default function GwrAttempt({ setRef }) {
       h4={header}
       btnClass={btnClass}
       btnLink={"https://tix.africa/discover/poolfestng"}
+      text={text}
     />
   );
 }

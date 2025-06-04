@@ -5,6 +5,8 @@ import PoolImageClear from "../assets/images/pool-img-clear.png";
 export default function PoolComp() {
   const btn = "REGISTER TO PLAY";
   const btnClass = "btn-pool";
+  const text =
+    "The largest eight-ball pool competition in Nigerian history—an unprecedented gathering of the nation’s finest cue sports talents, showcasing elite skill, fierce competition, and record-breaking participation. A landmark event that elevated the profile of billiards in Nigeria and set a new standard for excellence in the sport.";
 
   const header = (
     <>
@@ -23,6 +25,7 @@ export default function PoolComp() {
       button={btn}
       h3={header}
       btnClass={btnClass}
+      text={text}
     />
   );
 }

@@ -3,6 +3,7 @@ import "./styles/ShopBrands.scss";
 import { PRODUCTS as products } from "../helpers/object";
 import { useEffect, useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function ShopBrands({ setRef }) {
   const ref = useRef();
@@ -13,7 +14,7 @@ export default function ShopBrands({ setRef }) {
 
   const renderProducts = products.map((product, index) => {
     return (
-      <div key={index} className="products-container">
+      <SwiperSlide key={index} className="mySwiper products-container">
         <div className="product__img">
           <LazyLoadImage
             placeholderSrc={product.image}
@@ -29,7 +30,7 @@ export default function ShopBrands({ setRef }) {
 
           {/* <h6>{product.price}</h6> */}
         </div>
-      </div>
+      </SwiperSlide>
     );
   });
 
@@ -46,7 +47,29 @@ export default function ShopBrands({ setRef }) {
       </aside>
 
       <aside className="shop-brands__products">
-        <div className="products-wrapper">{renderProducts}</div>
+        <Swiper
+          className="products-wrapper"
+          breakpoints={{
+            320: {
+              slidesPerView: 1.2,
+              spaceBetween: "27",
+            },
+            640: {
+              slidesPerView: 1.2,
+              spaceBetween: "27",
+            },
+            768: {
+              slidesPerView: 1.5,
+              spaceBetween: "16",
+            },
+            990: {
+              slidesPerView: 3,
+              spaceBetween: "24",
+            },
+          }}
+        >
+          {renderProducts}
+        </Swiper>
 
         <Button link={"https://shopdunkit.com/"}>Shop Now</Button>
       </aside>

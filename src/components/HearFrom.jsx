@@ -13,7 +13,7 @@ export default function HearFrom() {
 
           <p>
             Get to know the man behind the mission! In this exclusive video,
-            Scott Igebene shares his passion, journey, and what this Guinness
+            Scott Igbene shares his passion, journey, and what this Guinness
             World Record attempt means to him and the nation.
           </p>
         </div>

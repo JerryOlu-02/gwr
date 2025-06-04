@@ -29,7 +29,7 @@ export default function Hero({ children }) {
       <aside className="hero-bottom">
         <div className="hero-bottom__text">
           <p>DATE OF THE EVENT</p>
-          <h5>July 15–20 2025</h5>
+          <h5>tuesday, July 15, 2025 </h5>
         </div>
 
         <div className="hero-bottom__text">

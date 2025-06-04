@@ -13,6 +13,7 @@ export default function ImgWithText({
   logo,
   btnClass,
   btnLink,
+  text,
 }) {
   return (
     <section ref={ref} className={`imgText ${sectionClass}`}>
@@ -24,13 +25,7 @@ export default function ImgWithText({
 
           {h3 && h3}
 
-          <p className="content-text">
-            Scott will be attempting not one, but two official Guinness World
-            Records: playing pool for the longest continuous time as an
-            individual, and playing against the most number of people in a
-            single stretch of consecutive pool games. Each shot, each match,
-            brings Nigeria one step closer to global recognition.
-          </p>
+          <p className="content-text">{text}</p>
         </div>
 
         <Button className={btnClass} link={btnLink}>
