@@ -24,9 +24,16 @@ export default function History() {
       </p>
 
       <div className="btn__container">
-        <Button>BOOK TICKET</Button>
+        <Button link={"https://tix.africa/discover/poolfestng"}>
+          BOOK TICKET
+        </Button>
 
-        <Button className="btn-outline">REGISTER TO PLAY</Button>
+        <Button
+          link={"https://tix.africa/discover/poolfestng"}
+          className="btn-outline"
+        >
+          REGISTER TO PLAY
+        </Button>
       </div>
     </ImgWithTextEqual>
   );

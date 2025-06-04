@@ -12,6 +12,7 @@ export default function ImgWithText({
   srcPlaceholder,
   logo,
   btnClass,
+  btnLink,
 }) {
   return (
     <section ref={ref} className={`imgText ${sectionClass}`}>
@@ -32,7 +33,9 @@ export default function ImgWithText({
           </p>
         </div>
 
-        <Button className={btnClass}>{button}</Button>
+        <Button className={btnClass} link={btnLink}>
+          {button}
+        </Button>
       </aside>
 
       <aside className="imgText-image">

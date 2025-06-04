@@ -42,8 +42,15 @@ export default function DailyActivities({ setRef }) {
 
   const btn = (
     <>
-      <Button>RESERVE A FREE SPOT</Button>
-      <Button className="btn-outline">REGISTER TO PLAY</Button>
+      <Button link={"https://tix.africa/discover/poolfestng"}>
+        RESERVE A FREE SPOT
+      </Button>
+      <Button
+        link={"https://tix.africa/discover/poolfestng"}
+        className="btn-outline"
+      >
+        REGISTER TO PLAY
+      </Button>
     </>
   );
 

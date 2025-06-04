@@ -5,8 +5,8 @@
   background-color: variables.$red;
   color: rgba(250, 244, 235, 1);
   border: 1px solid variables.$red;
-
   padding: 17px 24px;
+
   @include mixins.roboto-mono;
   @include mixins.button-font;
   transition-property: background-color, border;
@@ -17,6 +17,10 @@
     background-color: transparent;
     border: 1px solid variables.$red;
   }
+}
+
+.btn__link {
+  width: max-content;
 }
 
 .btn-outline {
@@ -30,5 +34,11 @@
     background-color: rgba(203, 203, 203, 1);
     border: 1px solid rgba(203, 203, 203, 1);
     color: variables.$red;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .btn__link {
+    width: 100%;
   }
 }

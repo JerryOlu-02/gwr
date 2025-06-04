@@ -24,20 +24,20 @@ export default function Footer() {
     { scope: container }
   );
 
-  useGSAP(
-    () => {
-      gsap.to(".scrolling-text", {
-        scrollTrigger: {
-          trigger: ".scrolling-text",
-          scrub: true,
-          toggleActions: "restart pause resume pause",
-        },
-        y: "+300px",
-        duration: 5,
-      });
-    },
-    { scope: section }
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.to(".scrolling-text", {
+  //       scrollTrigger: {
+  //         trigger: ".scrolling-text",
+  //         scrub: true,
+  //         toggleActions: "restart pause resume pause",
+  //       },
+  //       y: -100,
+  //       duration: 5,
+  //     });
+  //   },
+  //   { scope: section }
+  // );
 
   return (
     <section ref={section} className="footer">

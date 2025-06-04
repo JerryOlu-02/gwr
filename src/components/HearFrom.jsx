@@ -19,8 +19,15 @@ export default function HearFrom() {
         </div>
 
         <div className="hear-from__buttons">
-          <Button>RESERVE A FREE SPOT</Button>
-          <Button className="btn-outline">REGISTER TO PLAY</Button>
+          <Button link={"https://tix.africa/discover/poolfestng"}>
+            RESERVE A FREE SPOT
+          </Button>
+          <Button
+            link={"https://tix.africa/discover/poolfestng"}
+            className="btn-outline"
+          >
+            REGISTER TO PLAY
+          </Button>
         </div>
       </aside>
 

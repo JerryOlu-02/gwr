@@ -48,7 +48,7 @@ export default function ShopBrands({ setRef }) {
       <aside className="shop-brands__products">
         <div className="products-wrapper">{renderProducts}</div>
 
-        <Button>Shop Now</Button>
+        <Button link={"https://shopdunkit.com/"}>Shop Now</Button>
       </aside>
     </section>
   );

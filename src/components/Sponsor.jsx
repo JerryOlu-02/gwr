@@ -18,7 +18,13 @@ export default function Sponsor() {
         </div>
 
         <div className="sponsor__buttons">
-          <Button>BECOME A SPONSOR</Button>
+          <Button
+            link={
+              "https://docs.google.com/forms/d/e/1FAIpQLSfio58eUvIxKA0ypCVu0cBh-hp2W1-SlzA3HaMaOJ242-ki9w/viewform"
+            }
+          >
+            BECOME A SPONSOR
+          </Button>
         </div>
       </aside>
 

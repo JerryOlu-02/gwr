@@ -54,7 +54,9 @@ export default function Guests({ setRef }) {
         </div>
 
         <div className="guests-content__btn">
-          <Button>RESERVE A FREE SPOT</Button>
+          <Button link={"https://tix.africa/discover/poolfestng"}>
+            RESERVE A FREE SPOT
+          </Button>
         </div>
       </aside>
 

@@ -58,9 +58,23 @@ export default function Navbar({
         </ul>
 
         <div className="nav-buttons">
-          <a className="nav-btn">REGISTER TO PLAY</a>
+          <a
+            href="https://tix.africa/discover/poolfestng"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-btn"
+          >
+            REGISTER TO PLAY
+          </a>
 
-          <a className="nav-btn">RESERVE A FREE SPOT</a>
+          <a
+            href="https://tix.africa/discover/poolfestng"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-btn"
+          >
+            RESERVE A FREE SPOT
+          </a>
         </div>
       </div>
 

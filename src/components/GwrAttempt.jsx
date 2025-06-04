@@ -32,6 +32,7 @@ export default function GwrAttempt({ setRef }) {
       logo={<GwrLogo />}
       h4={header}
       btnClass={btnClass}
+      btnLink={"https://tix.africa/discover/poolfestng"}
     />
   );
 }
