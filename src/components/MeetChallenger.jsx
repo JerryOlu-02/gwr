@@ -20,7 +20,7 @@ export default function MeetChallenger({ setRef }) {
       <h3>meet the</h3>
       <h5>challenger</h5>
 
-      <h6>SCOTT IGEBENE</h6>
+      <h6>SCOTT IGBENE</h6>
 
       <p>
         I'm Scott Igbene, and I’ve played pool since I was 13. Now, with support

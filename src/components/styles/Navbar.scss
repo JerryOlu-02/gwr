@@ -136,7 +136,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1065px) {
   .menu-bar {
     @include mixins.flex-column-center;
   }
@@ -144,11 +144,11 @@
 
 @media screen and (max-width: 1160px) {
   .nav-logo {
-    padding: 10.5px 30px;
+    padding: 10.5px 20px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1065px) {
   .navbar {
     justify-content: space-between;
   }

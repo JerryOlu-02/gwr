@@ -20,6 +20,7 @@ export default function Homepage() {
   const [activitiesRef, setActivitiesRef] = useState();
   const [guestsRef, setGuestsRef] = useState();
   const [shopMerchRef, setShopBrandsMerch] = useState();
+  const [faqRef, setFaqRef] = useState();
 
   return (
     <>
@@ -30,6 +31,7 @@ export default function Homepage() {
           activitiesRef={activitiesRef}
           guestsRef={guestsRef}
           shopMerchRef={shopMerchRef}
+          faqRef={faqRef}
         />
       </Hero>
 
@@ -51,7 +53,7 @@ export default function Homepage() {
 
       <ShopBrands setRef={setShopBrandsMerch} />
 
-      <Faqs />
+      <Faqs setRef={setFaqRef} />
 
       <History />
 

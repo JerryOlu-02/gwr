@@ -8,6 +8,7 @@ export default function Navbar({
   activitiesRef,
   guestsRef,
   shopMerchRef,
+  faqRef,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -54,6 +55,10 @@ export default function Navbar({
 
           <li onClick={() => handleScrollToSection(shopMerchRef)}>
             <a>SHOP MERCH</a>
+          </li>
+
+          <li onClick={() => handleScrollToSection(faqRef)}>
+            <a>FAQs</a>
           </li>
         </ul>
 

@@ -47,7 +47,7 @@ export const ACTIVITIES = [
     imageClear: PoolPlayersClear,
     title: "8-Ball Competition",
     description:
-      "A side tournament where attendees can register, play, and compete for fun and prizes while the record attempt is underway.",
+      "The largest 8-Ball Pool tournament in Nigerian history where attendees can register, play, and compete for fun and prizes while the record attempt is underway.",
   },
   {
     image: DjSet,
@@ -144,8 +144,11 @@ export const FAQS = [
   },
   {
     question: "Is the event open to the public?",
-    answer:
-      "Yes, the event is open to the public. Attendees can enjoy live entertainment, games, giveaways, and more.",
+    answer: `Viewing of the Guinness World Record Attempt is open to the public. Attendees can enjoy live entertainment, games, giveaways, and more. Spots are limited, so click here to sign up for a free spot`,
+    link: true,
+    textBefore:
+      "Viewing of the Guinness World Record Attempt is open to the public. Attendees can enjoy live entertainment, games, giveaways, and more. Spots are limited, so",
+    textAfter: " to sign up for a free spot",
   },
   {
     question: "What is the Guinness World Record being attempted?",
@@ -154,8 +157,11 @@ export const FAQS = [
   },
   {
     question: "What is the 8-Ball Competition and how do I join?",
-    answer:
-      "The 8-Ball Competition is a side event open to attendees. You can register at the venue to participate and win prizes.",
+    answer: `Click here`,
+    link: true,
+    textBefore:
+      "The 8-Ball Competition is the largest of it’s kind in Nigerian history where contestants would compete for a grand price. ",
+    textAfter: " to register for the competition.",
   },
   {
     question: "Will there be livestreaming of the event?",
@@ -169,6 +175,9 @@ export const FAQS = [
   },
   {
     question: "How can my brand become a sponsor?",
-    answer: `Visit the "Become a Sponsor" section on our website or contact us directly for partnership opportunities.`,
+    answer: `Click here`,
+    link: true,
+    textBefore: "Interested in becoming a sponsor? ",
+    textAfter: " to contact us for partnership opportunities.",
   },
 ];
