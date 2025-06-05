@@ -31,6 +31,7 @@ export default function Faqs({ setRef }) {
               className={`faq-answer ${isOpen && "open"}`}
               textBefore={faq.textBefore}
               textAfter={faq.textAfter}
+              url={faq.url}
             />
           ) : (
             <p className={`faq-answer ${isOpen && "open"}`}>{faq.answer}</p>

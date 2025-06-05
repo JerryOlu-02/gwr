@@ -25,7 +25,7 @@ export default function History() {
 
       <div className="btn__container">
         <Button link={"https://tix.africa/discover/poolfestng"}>
-          BOOK TICKET
+          RESERVE A FREE SPOT
         </Button>
 
         <Button

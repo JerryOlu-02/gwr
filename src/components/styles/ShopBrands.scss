@@ -69,6 +69,19 @@
   //   width: 312px;
   //   height: 460px;
 
+  a {
+    color: unset;
+    text-decoration: none;
+
+    &:focus,
+    &:active,
+    &:visited {
+      color: unset;
+      background-color: unset;
+      text-decoration: none;
+    }
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -80,9 +93,11 @@
   gap: 12px;
   color: variables.$black;
 
-  p {
+  a {
     @include mixins.roboto-flex;
     @include mixins.flex-p1-font;
+    color: variables.$black;
+    text-decoration: none;
     line-height: 100%;
     letter-spacing: 0%;
   }

@@ -1,9 +1,9 @@
-export default function LinkComp({ className, textBefore, textAfter }) {
+export default function LinkComp({ className, textBefore, textAfter, url }) {
   return (
     <p className={className}>
       {textBefore} {` Click `}
       <a
-        href="https://tix.africa/discover/poolfestng"
+        href={url}
         target="_blank"
         rel="noreferrer"
         style={{ color: "#fff", fontWeight: "600", textDecoration: "none" }}

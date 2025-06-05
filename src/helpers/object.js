@@ -146,6 +146,7 @@ export const FAQS = [
     question: "Is the event open to the public?",
     answer: `Viewing of the Guinness World Record Attempt is open to the public. Attendees can enjoy live entertainment, games, giveaways, and more. Spots are limited, so click here to sign up for a free spot`,
     link: true,
+    url: "https://tix.africa/discover/poolfestng",
     textBefore:
       "Viewing of the Guinness World Record Attempt is open to the public. Attendees can enjoy live entertainment, games, giveaways, and more. Spots are limited, so",
     textAfter: " to sign up for a free spot",
@@ -162,6 +163,7 @@ export const FAQS = [
     textBefore:
       "The 8-Ball Competition is the largest of it’s kind in Nigerian history where contestants would compete for a grand price. ",
     textAfter: " to register for the competition.",
+    url: "https://tix.africa/discover/poolfestng",
   },
   {
     question: "Will there be livestreaming of the event?",
@@ -179,5 +181,6 @@ export const FAQS = [
     link: true,
     textBefore: "Interested in becoming a sponsor? ",
     textAfter: " to contact us for partnership opportunities.",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfio58eUvIxKA0ypCVu0cBh-hp2W1-SlzA3HaMaOJ242-ki9w/viewform",
   },
 ];

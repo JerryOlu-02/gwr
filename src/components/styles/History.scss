@@ -8,12 +8,13 @@
 
   h3 {
     color: rgba(197, 167, 120, 1);
+    position: relative;
+    top: -16px;
   }
 
   .btn__container {
     .btn {
       @include mixins.btn-custom(rgba(197, 167, 120, 1), variables.$off-white);
-      color: variables.$black;
       box-shadow: 0px 4px 20px 0px rgba(245, 104, 20, 0.15);
     }
 
@@ -33,6 +34,8 @@
     h3 {
       line-height: 80px;
       font-size: 120px;
+
+      top: -3px;
     }
   }
 }

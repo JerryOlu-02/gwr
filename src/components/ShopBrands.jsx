@@ -16,17 +16,21 @@ export default function ShopBrands({ setRef }) {
     return (
       <SwiperSlide key={index} className="mySwiper products-container">
         <div className="product__img">
-          <LazyLoadImage
-            placeholderSrc={product.image}
-            src={product.clearImage}
-            width={`100%`}
-            height={`100%`}
-            alt="product__image"
-          />
+          <a href="https://shopdunkit.com/" target="_blank" rel="noreferrer">
+            <LazyLoadImage
+              placeholderSrc={product.image}
+              src={product.clearImage}
+              width={`100%`}
+              height={`100%`}
+              alt="product__image"
+            />
+          </a>
         </div>
 
         <div className="products__desc">
-          <p>{product.title}</p>
+          <a href="https://shopdunkit.com/" target="_blank" rel="noreferrer">
+            {product.title}
+          </a>
 
           {/* <h6>{product.price}</h6> */}
         </div>

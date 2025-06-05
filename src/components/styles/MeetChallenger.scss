@@ -1,2 +1,19 @@
 @use "/src/styles/variables";
 @use "/src/styles/mixins";
+
+.challenger__h5 {
+  position: relative;
+  top: -16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .challenger__h5 {
+    top: -28px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .challenger__h5 {
+    top: -8px;
+  }
+}
