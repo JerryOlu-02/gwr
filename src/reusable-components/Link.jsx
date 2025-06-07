@@ -1,7 +1,13 @@
-export default function LinkComp({ className, textBefore, textAfter, url }) {
+export default function LinkComp({
+  className,
+  textBefore,
+  textAfter,
+  url,
+  answer,
+}) {
   return (
     <p className={className}>
-      {textBefore} {` Click `}
+      {textBefore} {` ${answer} `}
       <a
         href={url}
         target="_blank"

@@ -144,7 +144,7 @@ export const FAQS = [
   },
   {
     question: "Is the event open to the public?",
-    answer: `Viewing of the Guinness World Record Attempt is open to the public. Attendees can enjoy live entertainment, games, giveaways, and more. Spots are limited, so click here to sign up for a free spot`,
+    answer: `click`,
     link: true,
     url: "https://tix.africa/discover/poolfestng",
     textBefore:
@@ -154,11 +154,11 @@ export const FAQS = [
   {
     question: "What is the Guinness World Record being attempted?",
     answer:
-      "125-hour non-stop game of pool by Scott Igbene, aiming to set a new world record for the longest pool-playing session.",
+      "The two Guinness World Record attempts include; Playing pool for the longest continuous time as an individual, and playing against the most number of people in a single stretch of consecutive pool games.",
   },
   {
     question: "What is the 8-Ball Competition and how do I join?",
-    answer: `Click here`,
+    answer: `Click`,
     link: true,
     textBefore:
       "The 8-Ball Competition is the largest of it’s kind in Nigerian history where contestants would compete for a grand price. ",
@@ -177,7 +177,7 @@ export const FAQS = [
   },
   {
     question: "How can my brand become a sponsor?",
-    answer: `Click here`,
+    answer: `Click`,
     link: true,
     textBefore: "Interested in becoming a sponsor? ",
     textAfter: " to contact us for partnership opportunities.",
