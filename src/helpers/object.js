@@ -154,7 +154,7 @@ export const FAQS = [
   {
     question: "What is the Guinness World Record being attempted?",
     answer:
-      "25-hour non-stop game of pool by Scott Igbene, aiming to set a new world record for the longest pool-playing session.",
+      "125-hour non-stop game of pool by Scott Igbene, aiming to set a new world record for the longest pool-playing session.",
   },
   {
     question: "What is the 8-Ball Competition and how do I join?",

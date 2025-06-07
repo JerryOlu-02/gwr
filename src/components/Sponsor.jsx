@@ -41,7 +41,7 @@ export default function Sponsor() {
         </div>
 
         <div className="sponsor-container">
-          <h6>(01)</h6>
+          <h6>(02)</h6>
 
           <h5>Youth Credibility</h5>
 
@@ -52,7 +52,7 @@ export default function Sponsor() {
         </div>
 
         <div className="sponsor-container">
-          <h6>(01)</h6>
+          <h6>(03)</h6>
 
           <h5>Lead Activation</h5>
 
