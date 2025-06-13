@@ -1,6 +1,6 @@
 import "./styles/Navbar.scss";
-import { ReactComponent as Logo } from "../assets/svg/pool.svg";
-import { useState } from "react";
+import { ReactComponent as Logo } from "../assets/svg/pool-logo.svg";
+import { useState, useEffect } from "react";
 
 export default function Navbar({
   eventRef,
@@ -10,6 +10,25 @@ export default function Navbar({
   shopMerchRef,
   faqRef,
 }) {
+  //  Intersection Observer to handle sticky navbar
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsSticky(scrollTop > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const stickyClass = isSticky ? "sticky" : "";
+
+  //  Custom hook to observe the navbar's visibility
   const [isOpen, setIsOpen] = useState(false);
 
   const activeClass = isOpen ? "open" : "";
@@ -25,7 +44,7 @@ export default function Navbar({
   };
 
   return (
-    <nav className={`navbar ${activeClass}`}>
+    <nav className={`navbar ${activeClass} ${stickyClass}`}>
       <aside className="nav-left">
         <div className="nav-logo">
           <a>

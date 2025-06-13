@@ -1,11 +1,9 @@
 import Button from "../reusable-components/Button";
 import "./styles/Hero.scss";
 
-export default function Hero({ children }) {
+export default function Hero() {
   return (
     <section className="hero">
-      {children}
-
       <aside className="hero-content">
         <div className="hero-text">
           <h1>POOL FEST NAIJA</h1>

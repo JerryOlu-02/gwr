@@ -6,10 +6,15 @@
   left: 0;
   top: 0;
   @include mixins.flex-row;
-  align-items: center;
+  // align-items: center;
   width: 100%;
   z-index: 10;
   border-bottom: 1px solid rgba(66, 64, 62, 1);
+}
+
+.navbar.sticky {
+  position: fixed;
+  background-color: variables.$black;
 }
 
 .nav-left {
@@ -17,7 +22,7 @@
 }
 
 .nav-logo {
-  padding: 10.5px 78px;
+  padding: 5px 78px;
   cursor: pointer;
   @include mixins.flex-column-center;
 
@@ -40,10 +45,20 @@
   }
 }
 
+.nav-right {
+  @include mixins.flex-row;
+  width: 100%;
+  // flex: 1;
+  height: inherit;
+  justify-content: space-between;
+}
+
 .nav-links {
   @include mixins.flex-row-center;
+  height: 100%;
 
   li {
+    @include mixins.flex-column-center;
     border-left: 1px solid rgba(66, 64, 62, 1);
     padding: 24px;
     height: 100%;
@@ -63,12 +78,6 @@
       text-decoration: none;
     }
   }
-}
-
-.nav-right {
-  @include mixins.flex-row;
-  width: 100%;
-  justify-content: space-between;
 }
 
 .nav-buttons {
@@ -136,21 +145,22 @@
   }
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1075px) {
   .menu-bar {
     @include mixins.flex-column-center;
   }
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1200px) {
   .nav-logo {
     padding: 10.5px 20px;
   }
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1075px) {
   .navbar {
     justify-content: space-between;
+    align-items: center;
   }
 
   .navbar.open {
@@ -180,12 +190,12 @@
 
   .nav-right {
     position: fixed;
-    top: 65px;
+    top: 81px;
     left: 0;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    height: 100vh;
+    height: unset;
 
     // display: none;
     transform: scaleX(0);

@@ -24,16 +24,16 @@ export default function Homepage() {
 
   return (
     <>
-      <Hero>
-        <Navbar
-          eventRef={eventRef}
-          challengerRef={challengerRef}
-          activitiesRef={activitiesRef}
-          guestsRef={guestsRef}
-          shopMerchRef={shopMerchRef}
-          faqRef={faqRef}
-        />
-      </Hero>
+      <Navbar
+        eventRef={eventRef}
+        challengerRef={challengerRef}
+        activitiesRef={activitiesRef}
+        guestsRef={guestsRef}
+        shopMerchRef={shopMerchRef}
+        faqRef={faqRef}
+      />
+
+      <Hero />
 
       <Partners />
 
