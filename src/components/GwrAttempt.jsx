@@ -1,6 +1,6 @@
 import ImgWithText from "../reusable-components/ImgWithText";
-import GwrImage from "../assets/images/gwr-img.png";
-import GwrImageClear from "../assets/images/gwr-img-clear.png";
+import GwrImage from "../assets/images/gwr-img.jpg";
+import GwrImageClear from "../assets/images/gwr-img-clear.jpg";
 import { ReactComponent as GwrLogo } from "../assets/svg/gwr-logo.svg";
 import { useEffect, useRef } from "react";
 

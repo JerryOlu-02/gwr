@@ -9,7 +9,7 @@ export default function HearFrom() {
         <div className="hear-from__text">
           <h3>hear from</h3>
 
-          <h1>Scott</h1>
+          <h1>Shehu</h1>
 
           <p>
             Get to know the man behind the mission! In this exclusive video,

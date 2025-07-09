@@ -27,6 +27,13 @@
     pointer-events: none;
     z-index: 0;
   }
+
+  &::after {
+    @include mixins.overlay();
+    background: url("/src/assets/images/dust.png");
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 .hero-content {
@@ -48,7 +55,7 @@
 
   h2 {
     @include mixins.fk-h2-font;
-    color: rgba(236, 20, 20, 1);
+    color: rgba(241, 158, 33, 1);
     position: relative;
     top: -16px;
   }
@@ -59,11 +66,14 @@
   gap: 20px;
 
   .btn {
-    @include mixins.btn-custom(variables.$red);
+    @include mixins.btn-custom(rgba(241, 158, 33, 1));
   }
 
   .btn-outline {
-    @include mixins.btn-outline-custom(variables.$off-white, variables.$red);
+    @include mixins.btn-outline-custom(
+      variables.$off-white,
+      rgba(241, 158, 33, 1)
+    );
   }
 }
 
@@ -100,7 +110,7 @@
 @media screen and (max-width: 1024px) {
   .hero {
     padding: 235px 75px 48px;
-    background-image: url("/src/assets/images/hero-img-2.png");
+    background-image: url("/src/assets/images/hero-img-2.jpg");
   }
 }
 
@@ -119,7 +129,7 @@
   .hero {
     padding: 105px 20px 28px;
     gap: 250px;
-    background-image: url("/src/assets/images/hero-img-3.png");
+    background-image: url("/src/assets/images/hero-img-3.jpg");
     background-size: cover;
     // background-position-x: center;
   }
