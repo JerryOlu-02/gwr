@@ -1,10 +1,10 @@
 // DAILY ACTIVITIES IMAGES
-import ScottImg from "../assets/images/scott-playing.jpg";
+import ScottImg from "../assets/images/gwr-img.jpg";
 import PeopleWatching from "../assets/images/people-watching.png";
 import DjSet from "../assets/images/dj-set.png";
 import PoolPlayers from "../assets/images/pool-players.png";
-import ScottImgClear from "../assets/images/scott-playing-clear.png";
-import PeopleWatchingClear from "../assets/images/people-watching-clear.png";
+import ScottImgClear from "../assets/images/gwr-img-clear.jpg";
+import PeopleWatchingClear from "../assets/images/people-watching-clear.jpg";
 import DjSetClear from "../assets/images/dj-set-clear.png";
 import PoolPlayersClear from "../assets/images/pool-players-clear.png";
 
