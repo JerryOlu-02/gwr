@@ -27,7 +27,7 @@ export default function Hero() {
       <aside className="hero-bottom">
         <div className="hero-bottom__text">
           <p>DATE OF THE EVENT</p>
-          <h5>tuesday, July 15, 2025 </h5>
+          <h5>tuesday, September 02, 2025 </h5>
         </div>
 
         <div className="hero-bottom__text">
@@ -37,7 +37,7 @@ export default function Hero() {
 
         <div className="hero-bottom__text">
           <p>FINALE</p>
-          <h5>JULY 20, 2025</h5>
+          <h5>September 07, 2025</h5>
         </div>
       </aside>
     </section>

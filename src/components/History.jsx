@@ -17,7 +17,7 @@ export default function History() {
       <h3>History</h3>
 
       <p>
-        Come witness greatness as Scott attempts to break two Guinness World
+        Come witness greatness as Shehu attempts to break two Guinness World
         Records amid the largest pool competition ever held in Nigeria. Don’t
         just hear about it; experience the energy, excitement, and the legacy
         making event.
