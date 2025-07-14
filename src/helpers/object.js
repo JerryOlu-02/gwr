@@ -140,7 +140,7 @@ export const FAQS = [
   {
     question: "When and where is the event taking place?",
     answer:
-      "The event will be held at Silverbird Galleria, Victoria Island, Lagos, from July 15th to July 20th, 2025.",
+      "The event will be held at Silverbird Galleria, Victoria Island, Lagos, from Septeber 2nd to September 7th, 2025.",
   },
   {
     question: "Is the event open to the public?",
