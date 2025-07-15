@@ -47,7 +47,7 @@ export default function Homepage() {
 
       <DailyActivities setRef={setActivitiesRef} />
 
-      <Guests setRef={setGuestsRef} />
+      {/* <Guests setRef={setGuestsRef} /> */}
 
       <Sponsor />
 

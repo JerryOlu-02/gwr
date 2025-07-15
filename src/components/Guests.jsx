@@ -28,7 +28,7 @@ export default function Guests({ setRef }) {
   });
 
   useEffect(() => {
-    setRef(ref);
+    // setRef(ref);
   }, []);
 
   const renderGuests = guests.map((guest, index) => {

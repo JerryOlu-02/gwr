@@ -68,9 +68,9 @@ export default function Navbar({
             <a>ACTIVITIES</a>
           </li>
 
-          <li onClick={() => handleScrollToSection(guestsRef)}>
+          {/* <li onClick={() => handleScrollToSection(guestsRef)}>
             <a>GUESTS</a>
-          </li>
+          </li> */}
 
           <li onClick={() => handleScrollToSection(shopMerchRef)}>
             <a>SHOP MERCH</a>
