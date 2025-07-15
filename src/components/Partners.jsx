@@ -4,6 +4,11 @@ import { ReactComponent as CueSportsLogo } from "../assets/svg/cue-sports-logo.s
 import { ReactComponent as DunkitLogo } from "../assets/svg/dunkit-logo.svg";
 import { ReactComponent as RhythmLogo } from "../assets/svg/rhythm-logo.svg";
 import { ReactComponent as PatriotLogo } from "../assets/svg/patriot-logo.svg";
+import { ReactComponent as ChroneLogo } from "../assets/svg/chrone-logo.svg";
+import { ReactComponent as GuinessLogo } from "../assets/svg/guiness-logo.svg";
+import { ReactComponent as RadissonLogo } from "../assets/svg/radisson-logo.svg";
+import { ReactComponent as OxfordLogo } from "../assets/svg/oxford-logo.svg";
+import { ReactComponent as JohnnyLogo } from "../assets/svg/johnny-logo.svg";
 import { ReactComponent as ArrowLeft } from "../assets/svg/arrow-back.svg";
 import { ReactComponent as ArrowRight } from "../assets/svg/arrow-front.svg";
 import { useRef } from "react";
@@ -23,7 +28,7 @@ export default function Partners() {
       .to(".partners-container", {
         xPercent: -100 * (sections.length - 5),
         repeat: -1,
-        duration: 15,
+        duration: 30,
         ease: "linear",
       })
       .totalProgress(0);
@@ -74,7 +79,7 @@ export default function Partners() {
           className="mySwiper partners-content"
         >
           <SwiperSlide className="partners-container">
-            <PatriotLogo />
+            <ChroneLogo />
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
@@ -82,7 +87,11 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
-            <RhythmLogo />
+            <PatriotLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <GuinessLogo />
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
@@ -90,7 +99,23 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
-            <PatriotLogo />
+            <RadissonLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <OxfordLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <JohnnyLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <RhythmLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <ChroneLogo />
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
@@ -98,11 +123,31 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
-            <RhythmLogo />
+            <PatriotLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <GuinessLogo />
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
             <CueSportsLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <RadissonLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <OxfordLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <JohnnyLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <RhythmLogo />
           </SwiperSlide>
         </Swiper>
       </aside>
