@@ -28,7 +28,7 @@ export default function Partners() {
       .to(".partners-container", {
         xPercent: -100 * (sections.length - 5),
         repeat: -1,
-        duration: 30,
+        duration: 3,
         ease: "linear",
       })
       .totalProgress(0);

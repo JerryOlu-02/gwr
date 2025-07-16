@@ -83,7 +83,7 @@ export default function Navbar({
 
         <div className="nav-buttons">
           <a
-            href="https://tix.africa/discover/poolfestng"
+            href="https://tix.Africa/discover/poolfestnaija"
             target="_blank"
             rel="noreferrer"
             className="nav-btn"
@@ -92,7 +92,7 @@ export default function Navbar({
           </a>
 
           <a
-            href="https://tix.africa/discover/poolfestng"
+            href="https://tix.Africa/discover/poolfestnaija"
             target="_blank"
             rel="noreferrer"
             className="nav-btn"

@@ -11,12 +11,12 @@ export default function Hero() {
         </div>
 
         <div className="hero-buttons">
-          <Button link={"https://tix.africa/discover/poolfestng"}>
+          <Button link={"https://tix.Africa/discover/poolfestnaija"}>
             RESERVE A FREE SPOT
           </Button>
 
           <Button
-            link={"https://tix.africa/discover/poolfestng"}
+            link={"https://tix.Africa/discover/poolfestnaija"}
             className="btn-outline"
           >
             REGISTER TO PLAY
