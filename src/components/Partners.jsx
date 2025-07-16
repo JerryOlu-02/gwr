@@ -28,7 +28,7 @@ export default function Partners() {
       .to(".partners-container", {
         xPercent: -100 * (sections.length - 5),
         repeat: -1,
-        duration: 3,
+        duration: 25,
         ease: "linear",
       })
       .totalProgress(0);
@@ -95,10 +95,6 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
-            <CueSportsLogo />
-          </SwiperSlide>
-
-          <SwiperSlide className="partners-container">
             <RadissonLogo />
           </SwiperSlide>
 
@@ -108,10 +104,6 @@ export default function Partners() {
 
           <SwiperSlide className="partners-container">
             <JohnnyLogo />
-          </SwiperSlide>
-
-          <SwiperSlide className="partners-container">
-            <RhythmLogo />
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
@@ -131,10 +123,6 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
-            <CueSportsLogo />
-          </SwiperSlide>
-
-          <SwiperSlide className="partners-container">
             <RadissonLogo />
           </SwiperSlide>
 
@@ -144,10 +132,6 @@ export default function Partners() {
 
           <SwiperSlide className="partners-container">
             <JohnnyLogo />
-          </SwiperSlide>
-
-          <SwiperSlide className="partners-container">
-            <RhythmLogo />
           </SwiperSlide>
         </Swiper>
       </aside>
