@@ -9,6 +9,7 @@ import { ReactComponent as GuinessLogo } from "../assets/svg/guiness-logo.svg";
 import { ReactComponent as RadissonLogo } from "../assets/svg/radisson-logo.svg";
 import { ReactComponent as OxfordLogo } from "../assets/svg/oxford-logo.svg";
 import { ReactComponent as JohnnyLogo } from "../assets/svg/johnny-logo.svg";
+import { ReactComponent as SnookerzLogo } from "../assets/svg/snookerz-logo.svg";
 import { ReactComponent as ArrowLeft } from "../assets/svg/arrow-back.svg";
 import { ReactComponent as ArrowRight } from "../assets/svg/arrow-front.svg";
 import { useRef } from "react";
@@ -103,6 +104,10 @@ export default function Partners() {
           </SwiperSlide>
 
           <SwiperSlide className="partners-container">
+            <SnookerzLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
             <JohnnyLogo />
           </SwiperSlide>
 
@@ -132,6 +137,10 @@ export default function Partners() {
 
           <SwiperSlide className="partners-container">
             <JohnnyLogo />
+          </SwiperSlide>
+
+          <SwiperSlide className="partners-container">
+            <SnookerzLogo />
           </SwiperSlide>
         </Swiper>
       </aside>
