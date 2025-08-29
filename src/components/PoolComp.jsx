@@ -18,7 +18,7 @@ export default function PoolComp() {
 
   return (
     <ImgWithText
-      btnLink={"https://tix.Africa/discover/poolfestnaija"}
+      btnLink={"https://www.eventporte.com/event-details/poolfest9ja/"}
       sectionClass={"ImgWithText__2"}
       srcPlaceholder={PoolImage}
       src={PoolImageClear}

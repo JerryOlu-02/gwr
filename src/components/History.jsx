@@ -24,12 +24,12 @@ export default function History() {
       </p>
 
       <div className="btn__container">
-        <Button link={"https://tix.Africa/discover/poolfestnaija"}>
+        <Button link={"https://www.eventporte.com/event-details/poolfest9ja/"}>
           RESERVE A FREE SPOT
         </Button>
 
         <Button
-          link={"https://tix.Africa/discover/poolfestnaija"}
+          link={"https://www.eventporte.com/event-details/poolfest9ja/"}
           className="btn-outline"
         >
           REGISTER TO PLAY

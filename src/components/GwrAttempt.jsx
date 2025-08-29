@@ -34,7 +34,7 @@ export default function GwrAttempt({ setRef }) {
       logo={<GwrLogo />}
       h4={header}
       btnClass={btnClass}
-      btnLink={"https://tix.Africa/discover/poolfestnaija"}
+      btnLink={"https://www.eventporte.com/event-details/poolfest9ja/"}
       text={text}
     />
   );
